@@ -459,7 +459,7 @@ The path-averaged or effective absorption coefficient, denoted here $\kappa_{\rm
 \be\label{eq:effective_epsilon1}
    \int_{\om_{\rm min}}^{\om_{\rm max}}{I_{\om}(L) \; \d \om} = \exp\left(-\kappa_{\rm e}\, L\right) \int_{\om_{\rm min}}^{\om_{\rm max}}{ I_{\rm b,\om}(T_w) \; \d \om} + \left(1-\exp\left(-\kappa_{\rm e} \, L\right)\right) \int_{\om_{\rm min}}^{\om_{\rm max}}{I_{\rm b,\om}(T_g) \; \d \om}
 \ee
-where $L$ is the total path length given in cm. The bounds of integration in Eq.~\ref{eq:effective_epsilon1} are fixed, with $\om_{min} = 5$ cm$^{\rm -1}$, and $\om_{max} = 25000$ cm$^{\rm -1}$. However, the bounds of the integration for the gas-phase species are specified by the user. The remain outside spectral domain is integrated then considering only the contribution of soot (if present). See Eq.~\ref{eq::received_flux}. The large bounds of integration (5 -- 25000 cm$^{\rm -1}$) is large enought such that:
+where $L$ is the total path length given in cm. The bounds of integration in Eq.~\ref{eq:effective_epsilon1} are fixed, with $\om_{min} = 5$ cm$^{\rm -1}$, and $\om_{max} = 25000$ cm$^{\rm -1}$. However, the bounds of the integration for the gas-phase species are specified by the user. The remain outside spectral domain is integrated then considering only the contribution of soot (if present). See Eq.~\ref{eq::received_flux}. The large bounds of integration (5 -- 25000 cm$^{\rm -1}$) is large enough such that:
 \be
 \int_{\om_{\rm min}}^{\om_{\rm max}}{I_{b,\om}(T) \; \d \om} \approx \dfrac{\sigma}{\pi}T^4.
 \ee

@@ -198,8 +198,8 @@ Finally the \verb=driver= program calls \verb=rcdealloc= to deallocate the varia
 
 
  real(eb), parameter :: sigma   = 5.670400e-8_eb
- real(eb), parameter :: m_to_cm = 100.0_eb  ! convertion factor meters -> centimeters
- real(eb), parameter :: cm_to_m = 0.01_eb   ! convertion factor centimeters -> meters
+ real(eb), parameter :: m_to_cm = 100.0_eb  ! conversion factor meters -> centimeters
+ real(eb), parameter :: cm_to_m = 0.01_eb   ! conversion factor centimeters -> meters
 
  character(30) :: radcal_id
  real(eb) :: pfuel
@@ -534,7 +534,7 @@ real(eb), intent(in) :: omega ! wavenumber, units in cm-1
 real(eb), intent(in) :: temp  ! temperature, units in kelvin
 real(eb), intent(in) :: gc1   ! half width at half maximum for lorentz line, units in cm-1
 
-real(eb), intent(out):: sdweak  ! narrow band mean absortion coefficient, units in cm-1
+real(eb), intent(out):: sdweak  ! narrow band mean absorption coefficient, units in cm-1
 real(eb), intent(out):: gdinv   ! line width to line spacing ration for lorentz lines
 real(eb), intent(out):: gddinv  ! line width to line spacing ration for doppler
 integer,  intent(out):: i_model ! model used for snb fitting: 1: goody, 2 malkmus, 3 elsasser
@@ -1247,8 +1247,8 @@ subroutine read_point(i_input,i_output)
  \end{itemize}
 
 \begin{lstlisting}
- integer, intent(in) :: i_input  ! unit of the input file. alreay opened
- integer, intent(in) :: i_output ! unit of the output file. alreay opened
+ integer, intent(in) :: i_input  ! unit of the input file. already opened
+ integer, intent(in) :: i_output ! unit of the output file. already opened
 
  type gas_phase
     real(kind=eb), pointer :: obj
@@ -1278,8 +1278,8 @@ subroutine read_band(i_input,i_output)
 This subroutine reads the input file \verb=RADCAL.in= (unit \verb=i_input=) and searches for the keyword \verb=&BANDS=. \verb=&BANDS= defines the lower and upper bound of the spectrum to be computed, \verb=ommin= and \verb=ommax=, respectively. Both are given in cm$^{-1}$.
 
 \begin{lstlisting}
- integer, intent(in) :: i_input  ! unit of the input file. alreay opened
- integer, intent(in) :: i_output ! unit of the output file. alreay opened
+ integer, intent(in) :: i_input  ! unit of the input file. already opened
+ integer, intent(in) :: i_output ! unit of the output file. already opened
 
  integer :: io_err ! error condition number
 \end{lstlisting}
@@ -1293,8 +1293,8 @@ subroutine read_wall(i_input,i_output)
  This subroutine reads the input file \verb=RADCAL.in= (unit \verb=i_input=) and searches for the keyword \verb=&WALL= which defines the wall (or infinity) temperature: \verb=TWALL=. In RadCal, the wall emits like a blackbody of temperature \verb=TWALL=.
 
 \begin{lstlisting}
- integer, intent(in) :: i_input  ! unit of the input file. alreay opened
- integer, intent(in) :: i_output ! unit of the output file. alreay opened
+ integer, intent(in) :: i_input  ! unit of the input file. already opened
+ integer, intent(in) :: i_output ! unit of the output file. already opened
 
  integer :: io_err ! catch the value of the error raised by output subroutine
 \end{lstlisting}
@@ -1309,8 +1309,8 @@ subroutine read_header(i_input,i_output)
 This subroutine reads the input file \verb=RADCAL.in= (unit \verb=i_input=) and searches for the keyword \verb=&HEADER=. \verb=&HEADER= defines the case id (\verb=CHID=) used to generate the output Tecplot file and the case title (\verb=TITLE=), which is to be printed in the output file.
 
 \begin{lstlisting}
- integer, intent(in) :: i_input  ! unit of the input file. alreay opened
- integer, intent(in) :: i_output ! unit of the output file. alreay opened
+ integer, intent(in) :: i_input  ! unit of the input file. already opened
+ integer, intent(in) :: i_output ! unit of the output file. already opened
 
  integer :: io_err ! catch the value of the error raised by output subroutine
 \end{lstlisting}
